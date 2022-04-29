@@ -1,0 +1,6 @@
+import math
+a = int(input())
+b = int(input())
+m = int(input())
+print(format(math.pow(a,b),".0f"))
+print(format(math.pow(a,b)%m,".0f"))
