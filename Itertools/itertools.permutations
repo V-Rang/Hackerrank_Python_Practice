@@ -1,0 +1,10 @@
+from itertools import permutations
+ls = input().split()
+instr = ls[0]
+instr = sorted(instr)
+k  = int(ls[1])
+# print(instr)
+for i in list(permutations(instr,k)):
+    for j in range(len(i)):
+        print(i[j],end='')
+    print()
