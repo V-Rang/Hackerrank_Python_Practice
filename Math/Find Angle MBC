@@ -1,0 +1,8 @@
+import math
+x = float(input())
+y  = float(input())
+deg_symbol = u"\N{DEGREE SIGN}"
+b = math.acos(y/( math.sqrt(x**2 + y**2) ))
+theta = math.atan((math.sin(b))/(((2*y)/(math.sqrt(x**2 + y**2)))- math.cos(b)))
+print(round(math.degrees(theta)),end = '')
+print(deg_symbol)
