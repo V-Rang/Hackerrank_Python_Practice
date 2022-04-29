@@ -6,3 +6,8 @@ b = math.acos(y/( math.sqrt(x**2 + y**2) ))
 theta = math.atan((math.sin(b))/(((2*y)/(math.sqrt(x**2 + y**2)))- math.cos(b)))
 print(round(math.degrees(theta)),end = '')
 print(deg_symbol)
+
+#revised code using property: "median on hypotenuse of right triangle divides it into two isosceles triangles"
+#theta = math.atan(x/y)
+#print(round(math.degrees(theta)),end = '')
+#print(deg_symbol)
