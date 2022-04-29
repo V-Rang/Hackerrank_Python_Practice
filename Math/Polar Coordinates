@@ -1,0 +1,4 @@
+import cmath
+z = complex(input())
+print(format(abs(z),".3f"))
+print(format(cmath.phase(z),".3f"))
