@@ -1,0 +1,43 @@
+def is_subset(subs,supers):
+    cond1 = False
+    for i in subs:
+        if(i in supers):
+            cond1 = True
+            continue
+        else:
+            cond1 = False
+            break
+    if(cond1 == True):
+        return True
+    else:
+        return False
+
+
+def is_superset(supers,subs):
+    if(is_subset(subs,supers)== True and len(supers)>len(subs)):
+        return True
+    else:
+        return False
+
+        
+superset = set(map(int,input().split()))
+# seta = {1,2,3,4,5,6,7,8,9,10,11,12,23,45,84,78}
+nc = int(input())
+cond = False
+set_list = []
+for i in range(nc):
+    set_list.append(set(map(int,input().split())))
+
+for setc in set_list:
+    if(is_superset(superset,setc) == False):
+        print('False')
+        cond = False
+        break
+    else:
+        cond = True
+        continue
+
+if(cond == True):
+    print('True')
+
+
