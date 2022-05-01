@@ -1,0 +1,12 @@
+items = dict()
+for _ in range(int(input())):
+    ls = input().split()
+    st = str()
+    for i in range(len(ls)-1):
+        st += ls[i]
+        st += ' '
+    st = st[:-1]
+    items[st] = items.get(st,0) + int(ls[-1])
+for key in items:
+    print(key,items[key])
+
