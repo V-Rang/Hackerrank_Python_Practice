@@ -1,0 +1,11 @@
+from collections import Counter
+counter = Counter()
+ls = []
+for _ in range(int(input())):
+    ls.append(input())
+for i in range(len(ls)):
+    counter[ls[i]] = counter.get(ls[i],0) + 1
+print(len(counter.keys()))
+for val in counter.values():
+    print(val,end= ' ')
+
