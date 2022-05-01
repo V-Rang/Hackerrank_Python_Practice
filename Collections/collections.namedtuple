@@ -1,0 +1,17 @@
+n = int(input())
+txt = input().split()
+for i in range(len(txt)):
+    if(txt[i]== 'MARKS'):
+        marks_col = i
+        break
+tot_sum = 0
+for i in range(n):
+    tot_sum += float(input().split()[marks_col])
+print(format(tot_sum/n,".2f"))
+
+
+#Alternative Code
+n,stulist,total = int(input()),input().split(),0
+for i in range(n):
+    total += float(input().split()[stulist.index('MARKS')])
+print(format((total/n),'.2f'))
