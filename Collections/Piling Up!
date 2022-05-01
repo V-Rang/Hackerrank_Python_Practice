@@ -6,39 +6,39 @@ for _ in range(int(input())):
     cond = True
     newl = []
     newind = 0
-    x = 0
-    y = len(d)-1
+
     if(d[0]<= d[len(d)-1]):
         newl.append(d[len(d)-1])
         newind += 1
-        # d.pop()
-        y -= 1
+        d.pop()
+        # y -= 1
     else:
         newl.append(d[0])
         newind += 1
-        # d.popleft()
-        x += 1
+        d.popleft()
+        # x += 1
 
-    while(x<=y):
+    while(len(d) != 0):
         # print(newl)
-
-        if(d[x] > newl[newind-1] or d[y] > newl[newind-1]):
+        if(d[0] > newl[newind-1] or d[len(d)-1] > newl[newind-1]):
             cond = False
             break
 
-        if(d[x]>=d[y]):
-            newl.append(d[x])
+        if(d[0]>=d[len(d)-1]):
+            newl.append(d[0])
             newind += 1
-            # d.popleft()
-            x += 1
+            d.popleft()
+            # x += 1
         else:
-            newl.append(d[y])
+            newl.append(d[len(d)-1])
             newind += 1
-            y -= 1
+            d.pop()
+            # y -= 1
     if(cond==False):
         ans.append('No')
     else:
         ans.append('Yes')
+# print(newl)
 for x in ans:
     print(x)
 
