@@ -1,0 +1,22 @@
+grpa = list()
+grpb = list()
+ls = input().split()
+n = int(ls[0])
+m = int(ls[1])
+
+for i in range(n):
+    grpa.append(input())
+for i in range(m):
+    grpb.append(input())
+
+for word in range(len(grpb)):
+    defdic_word = list()
+    for indices in range(len(grpa)):
+        if(grpb[word] == grpa[indices]):
+            defdic_word.append(indices+1)
+    if(len(defdic_word)==0):
+        print('-1')
+    else:
+        for index in range(len(defdic_word)):
+            print(defdic_word[index],end = ' ')
+        print()
