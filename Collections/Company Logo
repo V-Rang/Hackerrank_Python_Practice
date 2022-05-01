@@ -1,0 +1,22 @@
+def byvalue(item):
+    return item[1]
+
+from collections import Counter
+counter = Counter()
+comp_name = input()
+for i in range(len(comp_name)):
+    counter[comp_name[i]] = counter.get(comp_name[i],0) + 1
+
+comp_namesort = sorted(comp_name)
+alsorted = Counter()
+for alpha in comp_namesort:
+    for match in counter:
+        if(match == alpha):
+            alsorted[alpha] = counter[match]
+
+#sort in desc order of values:
+desdic = {k:v for k,v in sorted(alsorted.items(),key = byvalue,reverse=True)}
+for k in range(3):
+    print(list(desdic.keys())[k], list(desdic.values())[k])
+
+
