@@ -1,0 +1,4 @@
+from itertools import groupby
+instr = input()
+for key,group in groupby(instr,lambda x:x[0]):
+    print(f'{len(list(group)), int(key)}',end = ' ')
