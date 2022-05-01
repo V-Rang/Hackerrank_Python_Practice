@@ -1,0 +1,14 @@
+from collections import Counter
+no_shoes = int(input())
+shoe_sizes = list(map(int,input().split()))
+no_cust = int(input())
+shoe_sizesCounter = Counter(shoe_sizes)
+
+total_money = 0
+for i in range(no_cust):
+    size,money = list(map(int,input().split()))
+    if(shoe_sizesCounter[size] != 0):
+        total_money += money
+        shoe_sizesCounter[size] -= 1
+print(total_money)
+
