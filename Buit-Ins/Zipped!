@@ -1,0 +1,14 @@
+n,x = list(map(int,input().split()))
+stuls = [i for i in range(n)]
+td = dict()
+for i in stuls:
+    td[i] = 0
+
+for _ in range(x):
+    mls = list(map(float,input().split()))
+    for i in range(n):
+        td[i] += mls[i]
+
+for k in td.keys():
+    avg = td[k]/x
+    print('{0:.1f}'.format(avg))
