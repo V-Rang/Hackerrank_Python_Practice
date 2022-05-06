@@ -1,0 +1,11 @@
+import numpy
+
+def arrays(arr):
+    out = []
+    for i in range(len(arr)-1,-1,-1):
+            out.append(arr[i])
+    return numpy.array(out,float)
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
