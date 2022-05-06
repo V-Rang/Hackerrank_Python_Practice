@@ -34,3 +34,9 @@ for _ in range(queries):
 
 #from https://docs.python-guide.org/writing/gotchas/
 #Python’s default arguments are evaluated once when the function is defined, not each time the function is called (like it is in say, Ruby). 
+# because if we use an object as a default argument in python it's only' 
+# initialised once when the function is defined and is reused every time there 
+# is need for the default argument. hence only the odd function's variable was' 
+# ' resetting, While the even's was adding up as the object for even wascreated at 
+# the first use and so the init was only invoked once. so invoking the constructor
+# every time the streams are called will reset the class variable everytime.
