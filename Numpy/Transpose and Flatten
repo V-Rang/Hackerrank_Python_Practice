@@ -1,0 +1,11 @@
+import numpy
+
+n, m = list(map(int,input().split()))
+ls = numpy.zeros(shape = (n,m),dtype=int)
+for i in range(n):
+    ls[i] = list(map(int,input().split()))
+print(ls.transpose())
+print(ls.flatten())
+
+
+
