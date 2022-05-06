@@ -1,0 +1,12 @@
+import numpy
+
+n,m,p  = list(map(int,input().split()))
+ls1 = numpy.zeros(shape = (n,p),dtype = int)
+ls2 = numpy.zeros(shape = (m,p),dtype = int)
+
+for i in range(n):
+    ls1[i] = list(map(int,input().split()))
+for i in range(m):
+    ls2[i] = list(map(int,input().split()))
+
+print(numpy.concatenate((ls1,ls2),axis=0))
